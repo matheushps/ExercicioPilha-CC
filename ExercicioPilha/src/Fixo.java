@@ -2,18 +2,23 @@ import java.util.Scanner;
 
 public class Fixo {
 	
-	public static void main(String[] args) {
-		String Lista[] = new String [10];
-		int posicao = Lista.length;
-		for (int i = 0; i < Lista.length; i++) {
-		posicao--;
-		System.out.println("Digite um valor:");
-		Scanner teclado = new Scanner(System.in);
-		Lista[posicao] = teclado.next();
-		}
-		  for (String valor : Lista) {
-		 System.out.println(valor); 
-		}
-		}
+public static void main(String[] args) {
 
+		System.out.println("Digite uma palavra:");
+		Scanner teclado = new Scanner(System.in);
+		String entrada = teclado.next();
+
+		String Lista[] = entrada.split("");
+	    String Inverter[] = new String[Lista.length];
+	
+        int posicao = Lista.length;
+		for (int i = 0; i < Lista.length; i++) {
+			 posicao--;
+		Inverter[i] = Lista[posicao];
+		}
+		
+		for (String valor : Inverter) {
+			System.out.printf(valor);
+		}
+	}
 }
